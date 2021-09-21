@@ -16,9 +16,9 @@
 - npm run test
 
 # Routes & Architecture Flow
-"Display Orders" => /orders     => Orders        => ShopApi \
-"More Details"   => /orders/:id => OrderDetails  => OrderItem  => OrderLine \
-"Create Order"   => order/new   => OrderCreate   => ShopApi \
+"Display Orders"  => /orders     => Orders        => ShopApi \
+"More Details"    => /orders/:id => OrderDetails  => OrderItem  => OrderLine \
+"Create Order"    => order/new   => OrderCreate   => ShopApi \
 
 ## Available Scripts
 In the project directory, you can run:
