@@ -11,15 +11,9 @@ export default function Orders():JSX.Element {
 		(async () => {
 			try {
 				const allOrders = await ShopApi.getOrders()
-				// console.log(allOrders)
-				setOrders(allOrders.data)
+				if (allOrders.data) setOrders(allOrders.data)
 				setLoading(false)
 			} catch (err: any) {
-				if (err.response && err.response.status >= 400) {
-					console.log(err.response.data.message)
-				} else {
-					console.log('Error')
-				}
 				setLoading(false)
 			}
 		})()

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router'
 import { toast } from 'react-toastify'
 import OrderLine from './OrderLine'
 import { Card } from 'antd'
-import Transaction from './Transaction'
+import Transaction from './OrderTransaction'
 import { OrderTransactions, OrdersInterface, OrderLines } from '../../types/types'
 
 export default function OrderItem(): JSX.Element {
