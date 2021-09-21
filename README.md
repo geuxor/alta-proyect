@@ -15,6 +15,11 @@
 # Testing 
 - npm run test
 
+# Routes & Architecture Flow
+"Display Orders" => /orders     => Orders        => ShopApi 
+"More Details"   => /orders/:id => OrderDetails  => OrderItem  => OrderLine
+"Create Order"   => order/new   => OrderCreate   => ShopApi
+
 ## Available Scripts
 In the project directory, you can run:
 #### - "start": "react-scripts start",
@@ -30,11 +35,6 @@ Runs Test files using JEST/Testing Library
 #### - "dev": "REACT_APP_API_DOMAIN=development npm start"
 Runs the app in the development mode.\
 Opens [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-# Routes & Architecture Flow
-"Display Orders" => /orders     => Orders        => ShopApi 
-"More Details"   => /orders/:id => OrderDetails  => OrderItem  => OrderLine
-"Create Order"   => order/new   => OrderCreate   => ShopApi
 
 ### NPM packages included
 - @ant-design/icons: 4.6.4,
