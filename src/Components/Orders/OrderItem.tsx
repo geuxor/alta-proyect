@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import moment from "moment";
 import { useHistory } from 'react-router'
 import OrderLine from './OrderLine'
 import { Button, Card } from 'antd'
