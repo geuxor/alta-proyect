@@ -1,4 +1,6 @@
 import axios from 'axios'
+import {OrdersInterface, OrderAmountInterface} from '../types/types'
+
 const ShopApi:any = {}
 type Method =
   | 'get' | 'GET'
@@ -10,34 +12,34 @@ type Method =
   | 'patch' | 'PATCH'
 
 interface AxtiosOptions {
-  headers?: object,
+  headers?: unknown,
   method?: Method
 }
 
 const options:AxtiosOptions = {
-  headers: { 'Content-Type': 'application/json' },
-  method: 'post'
+	headers: { 'Content-Type': 'application/json' },
+	method: 'post'
 }
 
 ShopApi.getOrders = async () =>
-  await axios.get('/shopOrders')
+	await axios.get('/shopOrders')
 
-ShopApi.getOrderDetails = async (id) =>
-  await axios.get(`/shopOrders/${id}`)
+ShopApi.getOrderDetails = async (id:string) =>
+	await axios.get(`/shopOrders/${id}`)
 
-ShopApi.OrderReserve = async (id) =>
-  await axios.post(`/shopOrders/${id}/reserve`, options)
+ShopApi.OrderReserve = async (id:string) =>
+	await axios.post(`/shopOrders/${id}/reserve`, options)
 
-ShopApi.OrderCapture = async (id, amount) =>
-  await axios.post(`/shopOrders/${id}/capture`, amount, options)
+ShopApi.OrderCapture = async (id:string, amount:OrderAmountInterface) =>
+	await axios.post(`/shopOrders/${id}/capture`, amount, options)
 
-ShopApi.OrderRefund = async (id, amount) =>
-  await axios.post(`/shopOrders/${id}/refund`, amount, options)
+ShopApi.OrderRefund = async (id:string, amount:OrderAmountInterface) =>
+	await axios.post(`/shopOrders/${id}/refund`, amount, options)
 
-ShopApi.OrderRelease = async (id) =>
-  await axios.post(`/shopOrders/${id}/release`, options)
+ShopApi.OrderRelease = async (id:string) =>
+	await axios.post(`/shopOrders/${id}/release`, options)
 
-ShopApi.OrderCreate = async (data) =>
-  await axios.post(`/shopOrders`, data, options)
+ShopApi.OrderCreate = async (data:OrdersInterface) =>
+	await axios.post('/shopOrders', data, options)
 
 export default ShopApi

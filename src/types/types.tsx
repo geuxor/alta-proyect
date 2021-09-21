@@ -25,3 +25,6 @@ export interface OrdersInterface {
 export interface Props {
   orderItem: OrdersInterface
 }
+export interface OrderAmountInterface {
+  amount: number;
+}
