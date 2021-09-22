@@ -12,6 +12,12 @@
 - `npm run dev`
 - Browser would automatically open pointing to http://localhost:3000/
 
+# Environment Variables
+Please add the following lines to your ".env" file located in your Root Folder. If it does not exist it needs to be created.
+
+REACT_APP_API_DOMAIN=production
+REACT_APP_CURRENCY=DKK
+
 # Testing 
 - `npm run test`
 - `a`
