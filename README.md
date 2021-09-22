@@ -43,7 +43,7 @@ Runs Test files using JEST/Testing Library
 Runs the app in the development mode.\
 Opens [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### NPM packages included
+## NPM packages included
 - @ant-design/icons: 4.6.4
 - antd: 4.16.13
 - axios: 0.21.4
@@ -53,7 +53,7 @@ Opens [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - react-scripts: 4.0.3
 - react-toastify: 7.0.4
 
-# Dev dependencies included
+## Dev dependencies included
 - @types/react-router-dom: 5.1.9
 - @typescript-eslint/eslint-plugin: 4.31.2
 - @typescript-eslint/parser: 4.31.2
